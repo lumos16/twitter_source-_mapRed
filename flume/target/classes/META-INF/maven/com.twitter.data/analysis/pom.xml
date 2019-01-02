@@ -33,47 +33,23 @@
       <artifactId>flume-ng-core</artifactId>
       <version>${flume.version}</version>
       <scope>provided</scope>
-      <exclusions>
-	      <exclusion>
-	      	<groupId>org.apache.lucene</groupId>
-	        <artifactId>lucene-analyzers-common</artifactId>
-	      </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.flume</groupId>
       <artifactId>flume-ng-sdk</artifactId>
       <version>${flume.version}</version>
       <scope>provided</scope>
-      <exclusions>
-	      <exclusion>
-	      	<groupId>org.apache.lucene</groupId>
-	        <artifactId>lucene-analyzers-common</artifactId>
-	      </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
       <version>${hadoop.version}</version>
       <scope>provided</scope>
-      <exclusions>
-	      <exclusion>
-	      	<groupId>org.apache.lucene</groupId>
-	        <artifactId>lucene-analyzers-common</artifactId>
-	      </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.twitter4j</groupId>
       <artifactId>twitter4j-stream</artifactId>
       <version>4.0.1</version>
-      <exclusions>
-	      <exclusion>
-	      	<groupId>org.apache.lucene</groupId>
-	        <artifactId>lucene-analyzers-common</artifactId>
-	      </exclusion>
-      </exclusions>
     </dependency>
 	<dependency>
 	    <groupId>com.github.apanimesh061</groupId>

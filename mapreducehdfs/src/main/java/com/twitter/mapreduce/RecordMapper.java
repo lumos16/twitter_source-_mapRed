@@ -15,13 +15,14 @@ public class RecordMapper extends MapReduceBase implements Mapper<LongWritable,T
 	static Text neutral = new Text(Constants.NEUTRAL);
 	
 	public void map(LongWritable key, Text record, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
-		String[] polarity = record.toString().split(":");
-		Float compound = Float.valueOf(polarity[0]);
+		String polarity = record.toString();
+		int pos = polarity.indexOf('\\');
+		Float compound = Float.valueOf(polarity.substring(0, pos));
 		Text result = neutral;
-		if(compound < 0.5 && compound >= -0.5) {}
-		else if(compound >= 0.5)
+		if(compound < 0.7 && compound >= -0.7) {}
+		else if(compound >= 0.7)
 			result = positive;
-		else if(compound <= -0.5)
+		else if(compound <= -0.7)
 			result = negative;
 		output.collect(result, intObj);
 	}
